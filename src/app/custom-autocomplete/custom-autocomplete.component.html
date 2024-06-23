@@ -1,0 +1,9 @@
+<div class="container">
+    <input type="text" class="container-search" placeholder="Search Google or type a URL" [(ngModel)]="searchInputValue"
+        (keyup)="onKeyUp(searchInputValue)" autocomplete="off">
+    <div class="container-search-options" *ngIf="showPopover">
+        <ul *ngFor="let item of suggestionList">
+            <li>{{item.text}}</li>
+        </ul>
+    </div>
+</div>
